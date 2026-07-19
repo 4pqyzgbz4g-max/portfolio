@@ -1,0 +1,343 @@
+/* ===========================
+   Author: Adrian Bonilla
+   Title: Casino Dealer Portfolio
+   Date: 2026/07/18
+   =========================== */
+
+/* Variables */
+:root {
+    --primary: #d4af37;      /* Gold */
+    --secondary: #8b0000;    /* Dark Red / Wine */
+    --dark: #111;
+    --dark2: #222;
+    --text: #f2f2f2;
+    --white: #ffffff;
+    --focus-outline: #ffcc00;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: radial-gradient(circle at center, #000000 0%, #1a1a1a 70%, #000000 100%);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background-color: var(--dark);
+    color: var(--primary);
+    padding: 25px;
+    text-align: center;
+    border-bottom: 5px solid var(--primary);
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    text-shadow: 0 0 8px rgba(212,175,55,0.4);
+}
+
+/* Navigation */
+nav {
+    background-color: var(--dark2);
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    margin: 8px 0;
+}
+
+nav a {
+    display: block;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px 12px;
+    border-radius: 6px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav a:hover {
+    background: var(--secondary);
+    color: var(--white);
+}
+
+nav a:focus {
+    outline: 3px solid var(--focus-outline);
+    outline-offset: 4px;
+}
+
+/* Main */
+main {
+    flex: 1;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+/* Headings */
+h2 {
+    margin-bottom: 10px;
+    color: var(--secondary);
+    position: relative;
+    padding-left: 10px;
+}
+
+h2::before {
+    content: "♦";
+    color: var(--secondary);
+    font-size: 1.4rem;
+    margin-right: 6px;
+    position: absolute;
+    left: -18px;
+    top: 0;
+}
+
+h3 {
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+/* Cards */
+.card {
+    background: #1a1a1a;
+    padding: 18px;
+    border-left: 6px solid var(--secondary);
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--white);
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+/* Two Columns */
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* TABLE (Skills Page) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+}
+
+th {
+    background: var(--secondary);
+    color: var(--white);
+    text-align: left;
+}
+
+tbody tr:nth-of-type(odd) {
+    background-color: #181818;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: #222;
+}
+
+/* VIDEO */
+.video-container {
+    margin: 20px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.video-container video {
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    background-color: #000;
+    outline: 3px solid var(--secondary);
+}
+
+/* AUDIO */
+audio {
+    width: 100%;
+    margin-top: 15px;
+    outline: 3px solid var(--secondary);
+    border-radius: 6px;
+}
+
+/* FORM */
+form input,
+form textarea,
+form select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border-radius: 6px;
+    border: 1px solid #555;
+    background: #222;
+    color: var(--white);
+}
+
+form select {
+    cursor: pointer;
+}
+
+form button {
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: var(--primary);
+    color: var(--dark);
+}
+
+/* SLIDER */
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    margin-top: 25px;
+    display: flex;
+}
+
+.slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    animation: slideAnimation 20s infinite;
+}
+
+.slide img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px 12px 0 0;
+}
+
+.slide-desc {
+    background: #111;
+    padding: 15px;
+    color: #f2f2f2;
+    font-size: 1.1rem;
+    border-radius: 0 0 12px 12px;
+    text-align: center;
+}
+
+@keyframes slideAnimation {
+    0% { transform: translateX(0%); }
+    20% { transform: translateX(0%); }
+
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+
+    75% { transform: translateX(-300%); }
+    100% { transform: translateX(-300%); }
+}
+
+/* Footer (siempre al fondo, sin fixed) */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    background-color: var(--dark);
+    color: var(--white);
+    border-top: 5px solid var(--primary);
+    text-shadow: 0 0 6px rgba(255,255,255,0.4);
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+    }
+
+    nav li {
+        margin: 0;
+    }
+
+    nav a {
+        padding: 12px 18px;
+        font-size: 1.15rem;
+    }
+
+    body {
+        padding: 40px 80px;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    main {
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    }
+
+    h2::before {
+        font-size: 1.6rem;
+        left: -22px;
+    }
+
+    .two-column {
+        grid-template-columns: 1fr 1fr;
+    }
+}
